@@ -1,42 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
 .App {
   text-align: center;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.App-header {
-  background-color: #282C34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-.App-link {
-  color: #61DAFB;
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-family: 'Russo One', sans-serif;
 }
 
+
+/* Dashboard */
 .dashboard {
   background-image: url('./img/dashboard.jpg');
   height: 100vh;
   background-size: cover;  
   color: white;
+  overflow: hidden;
+}
+
+.journal-entry-container {
+  display: flex;
+  justify-content: center;
+ }
+
+.sign-out-btn {
+  width: 100px;
+  padding: 1% 0%;
+  margin: 2%;
+  font-size: 12px;
+  background-color: #06A8FF;
+  border: none;
+  border-radius: 50px;
+  color:white;
+}
+
+
+/* Journal Form */
+.journal-form-btn {
+  width: 150px;
+  padding: 1% 0%;
+  margin: 2%;
+  font-size: 12px;
+  background-color: #06A8FF;
+  border: none;
+  border-radius: 50px;
+  color:white;
+}
+
+.journal-form-container {
+  display: flex;
+  align-items: center;
+}
+
+.journal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journal-form-input {
+  height: 30px;
+  width: 200px;
+}
+
+.input-container {
+  margin: 1%;
+  width: 50%;
+}
+
+.input-container label {
+ margin-right: 1%;
+}
+
+
+/* Journal Entry */
+.journal-entry {
+  display: flex;
+  background:rgb(255,255,255,.5);
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  width: 20%; 
+  border-radius: 20px;
+  padding: 2%;
+}
+
+.card-button {
+  width: 80px;
+  padding: 4% 0%;
+  margin: 2%;
+  font-size: 12px;
+  background-color: #06A8FF;
+  border: none;
+  border-radius: 50px;
+  color:white;
+  text-decoration: none;
 }
 
 /* Exercise Form */
@@ -53,150 +108,16 @@
   width: 15%;
 }
 
-.add-exercise-btn {
-  width: 150px;
-  padding: 1%;
-  margin: 2%;
-  font-size: 18px;
-  background-color: #06A8FF;
-  border: none;
-  border-radius: 50px;
-  color:white;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #F1F1F1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-i {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-.dropdown-content a:hover {background-color: #ddd;}
-.dropdown:hover .dropdown-content {display: block;}
-
 /* Exercise Card */
-.journal-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.exercise-card-container {
+  border: 1px solid black;
+  width: 25%;
 }
- .journal-card {
-   border: 1px solid white;
-   border-radius: 10px;
-   margin: 1%;
-   width: 20%;
-   text-decoration: none;
- }
 
- .journal-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- }
+.card-item {
+display: flex;
+}
 
- .journal-form-input {
-   height: 30px;
-   width: 200px;
- }
 
- .input-container {
-    margin: 1%;
-    width: 50%;
- }
 
- .input-container label {
-   margin-right: 1%;
- }
 
- .journal-form-btn {
-  width: 150px;
-  padding: 1% 0%;
-  margin: 2%;
-  font-size: 12px;
-  background-color: #06A8FF;
-  border: none;
-  border-radius: 50px;
-  color:white;
- }
-
- .journal-entry-container {
-  display: flex;
-  justify-content: center;
- }
-
- .journal-entry {
-  display: flex;
-  background:rgb(255,255,255,.5);
-  flex-direction: column;
-  align-items: center;
-  margin: 2%;
-  width: 20%; 
-  border-radius: 20px;
-  padding: 2%;
- }
-
- .card-button {
-  width: 80px;
-  padding: 4% 0%;
-  margin: 2%;
-  font-size: 12px;
-  background-color: #06A8FF;
-  border: none;
-  border-radius: 50px;
-  color:white;
-  text-decoration: none;
- }
- 
-
- .journal-form-container {
-  display: flex;
-  align-items: center;
- }
-
- .workout-card-link {
-    text-decoration: none;
-    color: white;
- }
- 
- /* Sign Out */
- .sign-out-btn {
-   width: 100px;
-   padding: 1% 0%;
-   margin: 2%;
-   font-size: 12px;
-   background-color: #06A8FF;
-   border: none;
-   border-radius: 50px;
-   color:white;
- }
- 
- .exercise-card-container {
-   border: 1px solid black;
-   width: 25%;
- }
-
- .card-item {
-   display: flex;
- }

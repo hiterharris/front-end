@@ -18,7 +18,7 @@ const ExerciseList = () => {
   }, []);
   
   return (
-    <div className="exercise-list">
+    <div>
       <ExerciseCard data={data} />
     </div>
   );
